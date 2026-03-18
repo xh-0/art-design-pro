@@ -58,14 +58,14 @@ export const staticRoutes: AppRouteRecordRaw[] = [
     path: '/outside',
     component: () => import('@views/index/index.vue'),
     name: 'Outside',
-    meta: { title: 'menus.outside.title' },
+    meta: { title: 'menus.outside.title', isHideTab: true },
     children: [
       // iframe 内嵌页面
       {
         path: '/outside/iframe/:path',
         name: 'Iframe',
         component: () => import('@/views/outside/Iframe.vue'),
-        meta: { title: 'iframe' }
+        meta: { title: 'iframe', isHideTab: true }
       }
     ]
   }

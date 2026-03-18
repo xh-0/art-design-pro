@@ -27,7 +27,7 @@ export const systemRoutes: AppRouteRecord = {
       meta: {
         title: 'menus.system.role',
         keepAlive: true,
-        roles: ['R_SUPER']
+        roles: ['R_SUPER', 'R_ADMIN']
       }
     },
     {
@@ -38,7 +38,8 @@ export const systemRoutes: AppRouteRecord = {
         title: 'menus.system.userCenter',
         isHide: true,
         keepAlive: true,
-        isHideTab: true
+        isHideTab: true,
+        roles: ['R_SUPER', 'R_ADMIN']
       }
     },
     {
@@ -48,7 +49,7 @@ export const systemRoutes: AppRouteRecord = {
       meta: {
         title: 'menus.system.menu',
         keepAlive: true,
-        roles: ['R_SUPER'],
+        roles: ['R_SUPER', 'R_ADMIN'],
         authList: [
           { title: '新增', authMark: 'add' },
           { title: '编辑', authMark: 'edit' },
